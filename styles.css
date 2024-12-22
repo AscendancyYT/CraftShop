@@ -1,0 +1,92 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+}
+body{
+  background-color: #000;
+}
+.container{
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;  
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .head{
+  width: 100%;
+  height: 10%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .head .name {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+  cursor: default;
+}
+.container .head .slogan{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  letter-spacing: 4px;
+  font-weight: 100;
+  cursor: default;
+}
+.container .categories {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .categories .card{
+  width: 500px;
+  height: 500px;
+  background-color: #2b2b2b;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all .2s linear;
+}
+.container .categories .card:hover{
+  background-color: #8a2be2;
+}
+.container .purple{
+  color: #8a2be2;
+}
+.container .categories .card .img{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .categories .card .name{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .categories .card .name .card-name{
+  font-size: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
