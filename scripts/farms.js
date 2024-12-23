@@ -2,7 +2,7 @@
 let loader;
 
 function loadingFunc() {
-  loader = setTimeout(showPage, 1000);
+  loader = setTimeout(showPage, 2700);
 }
 
 function showPage() {
@@ -22,7 +22,7 @@ const basalt = document.querySelector(".basalt");
 
 // handling clicks
 iron.addEventListener('click', function(){
-  localStorage.setItem("Chosen", "Iron");
+  localStorage.setItem("Chosen", "Железо");
   window.location.href = "../routes/farms/iron.html";
 })
 gold.addEventListener('click', function(){

@@ -3,9 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/iron.css">
   <title>CraftShop - Ферма булыжника</title>
 </head>
-<body>
+<body onload="loadingFunc()">
+  <div class="loader"></div>
+  <div class="container">
+    <div class="head">
+      <h1 class="name">Craft<span class="purple">Shop</span></h1>
+      <h2 class="slogan">Магазин игровых построек</h2>
+      <ul class="breadcrumb">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="../farms.html">Фермы</a></li>
+        <li class="currentPage"></li>
+      </ul>
+    </div>
+  </div>
   <script src="../../scripts/iron.js"></script>
 </body>
 </html>

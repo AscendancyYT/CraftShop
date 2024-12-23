@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+}
+.loader {
+  --s: 25px;
+  --_d: calc(0.353 * var(--s));
+  width: calc(var(--s) + var(--_d));
+  aspect-ratio: 1;
+  display: flex;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  flex: 1;
+  clip-path: polygon(
+    var(--_d) 0,
+    100% 0,
+    100% calc(100% - var(--_d)),
+    calc(100% - var(--_d)) 100%,
+    0 100%,
+    0 var(--_d)
+  );
+  background: conic-gradient(
+    from -90deg at calc(100% - var(--_d)) var(--_d),
+    #fff 135deg,
+    #666 0 270deg,
+    #aaa 0
+  );
+  animation: l5 1.2s infinite;
+}
+.loader:before {
+  margin-right: calc(var(--_d) / -2 - 1px);
+}
+.loader:after {
+  margin-left: calc(var(--_d) / -2 - 1px);
+  animation-delay: 0.6s;
+}
+@keyframes l5 {
+  0% {
+    transform: translateY(0);
+  }
+  16.67% {
+    transform: translateY(-10px);
+  }
+  33.33% {
+    transform: translateY(10px);
+  }
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+}
+
+body {
+  background-color: #000;
+}
+
+.loader{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  display: none;
+}
+
+.container .head {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1%;
+}
+.container .head .name {
+  width: 100%;
+  height: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+  cursor: default;
+}
+.container .purple {
+  color: #8a2be2;
+}
+.container .head .slogan {
+  width: 100%;
+  height: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  letter-spacing: 4px;
+  font-weight: 100;
+  cursor: default;
+}
+.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  width: 100%;
+  height: 33%;
+}
+.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 900;
+}
+.breadcrumb li + li:before {
+  padding: 8px;
+  color: white;
+  content: "/\00a0";
+}
+
+.breadcrumb li a {
+  color: #8a2be2;
+  text-decoration: none;
+  transition: all 0.2s linear;
+  font-size: larger;
+}
+
+.breadcrumb li a:hover {
+  color: #01447e;
+}
