@@ -1,4 +1,5 @@
 let loader;
+let backBtn = document.querySelector(".back-btn");
 
 function loadingFunc() {
   loader = setTimeout(showPage, 2300);
@@ -10,5 +11,8 @@ function showPage() {
 }
 
 let currentPage = document.querySelector(".currentPage");
+currentPage.innerHTML = localStorage.getItem("Chosen");
 
-currentPage.innerHTML = localStorage.getItem("Chosen")
+backBtn.addEventListener("click", function () {
+  window.location.href = "../../index.html";
+});
