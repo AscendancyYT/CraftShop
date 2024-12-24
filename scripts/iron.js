@@ -1,6 +1,7 @@
 let loader;
 let backBtn = document.querySelector(".back-btn");
 let productName = document.querySelector(".product-name");
+let purchaseButton = document.querySelector(".product-purchase-button");
 
 function loadingFunc() {
   loader = setTimeout(showPage, 2300);
@@ -18,4 +19,9 @@ backBtn.addEventListener("click", function () {
   window.location.href = "../../index.html";
 });
 
-productName.innerHTML += localStorage.getItem("Chosen")
+productName.innerHTML += localStorage.getItem("Chosen");
+
+purchaseButton.addEventListener("click", function(){
+  localStorage.setItem("Purhcasing", `Ферма ${localStorage.getItem("Chosen")}`);
+  localStorage.setItem("Price", "15.000 UZS")
+})
