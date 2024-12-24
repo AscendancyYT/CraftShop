@@ -22,6 +22,7 @@ backBtn.addEventListener("click", function () {
 productName.innerHTML += localStorage.getItem("Chosen");
 
 purchaseButton.addEventListener("click", function(){
-  localStorage.setItem("Purhcasing", `Ферма ${localStorage.getItem("Chosen")}`);
-  localStorage.setItem("Price", "15.000 UZS")
+  localStorage.setItem("Purchasing", `Ферма ${localStorage.getItem("Chosen")}`);
+  localStorage.setItem("Price", "15.000 UZS");
+  window.location.href = "../cheque.html"
 })

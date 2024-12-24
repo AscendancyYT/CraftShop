@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/cheque.css">
+  <title>CraftShop - Чек</title>
+</head>
+<body onload="loadingFunc()">
+  <div class="loader"></div>
+  <div class="container">
+    <div class="card">
+      <h1 class="head">Ваш чек</h1>
+      <div class="nameContainer">
+        <h2 class="itemName">Товар:</h2>
+        <h2 class="item"></h2>
+      </div>
+      <div class="priceContainer">
+        <h2 class="itemPrice">Цена:</h2>
+        <h2 class="price"></h2>
+      </div>
+      <div class="amountContainer">
+        <h2 class="itemAmount">Количество:</h2>
+        <h2 class="amount">x1</h2>
+      </div>
+      <div class="buyerNameContainer">
+        <h2 class="buyerName">Имя:</h2>
+        <input type="text" name="buyer" class="buyer" placeholder="Как вас звать?">
+      </div>
+      <div class="usernameContainer">
+        <h2 class="userName">Телеграм:</h2>
+        <input type="text" name="user" class="user" placeholder="Введите ваш телеграм">
+      </div>
+      <h1 class="overall">ИТОГО: </h1>
+      <button class="submit"></button>
+    </div>
+  </div>
+  <script src="../scripts/cheque.js"></script>
+</body>
+</html>
