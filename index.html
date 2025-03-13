@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CraftShop - Brawl Stars Goods</title>
+    <link rel="stylesheet" href="./Styles/main.css">
+</head>
+<body>
+    <header>
+        <h1>CraftShop</h1>
+    </header>
+
+    <div class="container">
+        <div class="product-card">
+            <h3>Brawl Pass</h3>
+            <p>120,000 UZS</p>
+            <button onclick="showForm('Brawl Pass', 120000)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <h3>Brawl Pass Plus</h3>
+            <p>200,000 UZS</p>
+            <button onclick="showForm('Brawl Pass Plus', 200000)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <h3>30 Gems</h3>
+            <p>40,000 UZS</p>
+            <button onclick="showForm('30 Gems', 40000)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <h3>80 Gems</h3>
+            <p>90,000 UZS</p>
+            <button onclick="showForm('80 Gems', 90000)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <h3>170 Gems</h3>
+            <p>180,000 UZS</p>
+            <button onclick="showForm('170 Gems', 180000)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <h3>360 Gems</h3>
+            <p>370,000 UZS</p>
+            <button onclick="showForm('360 Gems', 370000)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <h3>950 Gems</h3>
+            <p>970,000 UZS</p>
+            <button onclick="showForm('950 Gems', 970000)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <h3>2000 Gems</h3>
+            <p>2,020,000 UZS</p>
+            <button onclick="showForm('2000 Gems', 2020000)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <h3>Pro Pass</h3>
+            <p>300,000 UZS</p>
+            <button onclick="showForm('Pro Pass', 300000)">Buy Now</button>
+        </div>
+    </div>
+
+    <div class="orderList">
+        <header>
+            <h1>Ваши Заказы</h1>
+        </header>
+        <div class="orders" id="orders-container"></div>
+    </div>
+
+    <div id="order-form">
+        <h2>Complete Your Purchase</h2>
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Email (Connected to Brawl Stars)" required />
+        <input type="text" id="telegram" placeholder="Telegram Username" required />
+        <p class="warning">
+            Warning: If the Telegram username is incorrect or cannot be detected, your order will be declined.
+        </p>
+        <button id="submit-order" onclick="customAlert.alert('Order Placed successfully')">Submit Order</button>
+    </div>
+    <script src="./functions/main.js"></script>
+</body>
+</html>
